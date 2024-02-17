@@ -42,7 +42,7 @@ class _NumberFactClassState extends State<NumberFactClass> {
           centerTitle: true,
           backgroundColor: Colors.black,
           title: Text(
-            "FAIND YOUR NUMBER FACT",
+            "FIND YOUR NUMBER FACT",
             style: GoogleFonts.aBeeZee(
                 color: Colors.white70,
                 fontSize: 25,
