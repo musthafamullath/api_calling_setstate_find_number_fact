@@ -113,11 +113,26 @@ class _NumberFactClassState extends State<NumberFactClass> {
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
                       CircleAvatar(
-                        radius: 50,
-                        backgroundColor: Colors.white38,
-                        child: Lottie.asset(lottie,width: 100,height: 100)),
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
+                          radius: 50,
+                          backgroundColor: Colors.white38,
+                          child: Lottie.asset(lottie, width: 100, height: 100)),
+                      Container(
+                        padding: const EdgeInsets.only(
+                          left: 3,
+                          right: 3,
+                        ),
+                        decoration: const BoxDecoration(
+                          borderRadius: BorderRadius.all(Radius.circular(50)),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.grey,
+                              blurStyle: BlurStyle.solid,
+                              spreadRadius: 0.001,
+                              blurRadius: 10,
+                              offset: Offset(0.01, 0.01),
+                            ),
+                          ],
+                        ),
                         child: ElevatedButton(
                           onPressed: () async {
                             final number = _numberController.text;
@@ -129,8 +144,8 @@ class _NumberFactClassState extends State<NumberFactClass> {
                               },
                             );
                           },
-                          style:
-                              ElevatedButton.styleFrom(shadowColor: Colors.black),
+                          style: ElevatedButton.styleFrom(
+                              shadowColor: Colors.black),
                           child: const Text(
                             "Click Me",
                             style: TextStyle(
@@ -141,15 +156,15 @@ class _NumberFactClassState extends State<NumberFactClass> {
                         ),
                       ),
                       CircleAvatar(
-                        radius: 50,
-                        backgroundColor: Colors.white38,
-                        
-                        child: Lottie.asset(lottie,width: 100,height: 100)),
-                        
+                          radius: 50,
+                          backgroundColor: Colors.white38,
+                          child: Lottie.asset(lottie, width: 100, height: 100)),
                     ],
                   ),
                 ),
-                const SizedBox(height: 7.5,),
+                const SizedBox(
+                  height: 7.5,
+                ),
                 const Divider(),
                 Container(
                   margin: const EdgeInsets.all(10),
@@ -180,5 +195,4 @@ class _NumberFactClassState extends State<NumberFactClass> {
       ),
     );
   }
-  
 }
